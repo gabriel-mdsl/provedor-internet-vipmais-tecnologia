@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vipmais Tecnologia - Provedor de internet</title>
+    <link rel="shortcut icon" href="src/imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="src/css/estilo.css">
+    <link rel="stylesheet" href="src/css/responsivo.css">
+</head>
+
+<body>
+    <header class="cabecalho" id="inicio">
+        <div class="bara-do-topo">
+            <div class="informacoes">
+                <a class="tel" href="tel:+5598875370100"><i class="fas fa-phone"></i> 98 8753-7010</a>
+                <a class="whats" href="https://wa.me/559887537010?text=Bem%20vindo%20a%20Vipmais%20Tecnologia,%20deseja%20contratar%20um%20dos%20nossos%20planos" target="_blank"><i class="fab fa-whatsapp"></i> Whatsapp</a>
+                <span><i class="fas fa-clock"></i> Seg / Sex 8:00 - 12:00 <br>Sáb: 8:00 - 11:30</span>
+            </div>
+        </div>
+        <div class="conteiner-menu">
+            <div class="logo">
+                <img src="src/imagens/logo-marca-alpha.png" alt="Vipmais Tecnologia">
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="navegacao">
+                <ul class="menu" id="menu">
+                    <li><a href="#inicio" onclick="closeMenu()"><img src="src/imagens/home.png" alt="Ícone Início"> Início</a></li>
+                    <li><a href="#planos" onclick="closeMenu()"><img src="src/imagens/planos.jpg" alt="Ícone Planos"> Planos</a></li>
+                    <li><a href="#contratar" onclick="closeMenu()"><img src="src/imagens/contratar.png" alt="Ícone Contratar"> Contratar</a></li>
+                    <li><a href="#suporte" onclick="closeMenu()"><img src="src/imagens/suporte.jpg" alt="Ícone Suporte"> Suporte</a></li>
+                    <li><a href="#local" onclick="closeMenu()"><img src="src/imagens/localizacao.jpg" alt="Ícone Localização"> Local</a></li>
+                    <li><a href="#sobre" onclick="closeMenu()"><img src="src/imagens/sobre.png" alt="Ícone Sobre"> Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="banner">
+        <div class="banner-slider">
+            <div class="banner-slides">
+                <div class="banner-slide">
+                    <img src="src/imagens/banner.png" alt="Banner de Planos">
+                    <div class="banner-overlay">
+                        <div class="banner-content">
+                            <h3>Planos que cabem no seu bolso</h3>
+                            <p>Internet de qualidade com preços justos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-slide">
+                    <img src="src/imagens/banner-2.png" alt="Banner Fibra Óptica">
+                    <div class="banner-overlay">
+                        <div class="banner-content">
+                            <h3>100% Fibra Óptica</h3>
+                            <p>Tecnologia de ponta para máxima velocidade</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="banner-nav banner-prev" onclick="prevSlide()">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="banner-nav banner-next" onclick="nextSlide()">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        
+        <div class="banner-controls">
+            <div class="banner-dot active" onclick="currentSlide(1)"></div>
+            <div class="banner-dot" onclick="currentSlide(2)"></div>
+        </div>
+    </section>
+    
+    <div class="img-wifi"><img src="src/imagens/wifi-icon.png" alt="img-wifi"></div>
+    
+    <section class="planos secao" id="planos">
+        <div class="conteudo-secao">
+            <h2>Nossos Planos</h2>
+            
+            <div class="plan-calculator">
+                <h3>🏠 Quantos dispositivos você tem em casa?</h3>
+                <div class="calculator-controls">
+                    <div class="device-counter">
+                        <button class="counter-btn" onclick="changeDeviceCount(-1)">-</button>
+                        <span class="device-count" id="deviceCount">4</span>
+                        <button class="counter-btn" onclick="changeDeviceCount(1)">+</button>
+                    </div>
+                    <span>dispositivos conectados</span>
+                </div>
+                <div id="recommendedPlan" class="recommended-plan">
+                    <h4>💡 Recomendamos o plano <strong>Ouro 500MB</strong></h4>
+                    <p>Perfeito para sua família navegar sem travamentos!</p>
+                </div>
+            </div>
+            
+            <div class="todos-os-planos">
+                <div class="plano-bronze" id="bronze">
+                    <h2>Bronze</h2>
+                    <div>
+                        <span class="quantidade">300</span>
+                        <span class="mbps">MB</span>
+                    </div>
+                    <div class="price-display" style="background: linear-gradient(135deg, #cd7f32, #b8860b); color: white;">
+                        <div class="price-value">R$ 99,99</div>
+                        <div class="price-period">por mês</div>
+                    </div>
+                    <span>* Taxa de ativação: R$ 99,00</span>
+                    <div class="icones">
+                        <div class="icon"><img src="src/imagens/wifi-icon.png" alt="Ícone Wi-Fi"></div>
+                        <div class="icon"><img src="src/imagens/speed-icon.png" alt="Ícone Velocidade"></div>
+                        <div class="icon"><img src="src/imagens/cifrao-icon.png" alt="Ícone Pagamento"></div>
+                        <div class="icon"><img src="src/imagens/suporte-icon.png" alt="Ícone Suporte"></div>
+                    </div>
+                    <div class="link-contratar">
+                        <a href="#contratar" onclick="selecionarPlano('Bronze 300MB', 'R$ 99,99')">Contratar</a>
+                    </div>
+                </div>
+
+                <div class="plano-ouro" id="ouro">
+                    <h2>Ouro</h2>
+                    <div>
+                        <span class="quantidade">500</span>
+                        <span class="mbps">MB</span>
+                    </div>
+                    <div class="price-display" style="background: linear-gradient(135deg, #ffd700, #ffed4e); color: #1f2937;">
+                        <div class="price-value">R$ 109,99</div>
+                        <div class="price-period">por mês</div>
+                    </div>
+                    <span>* Taxa de ativação: R$ 99,00</span>
+                    <div class="icones">
+                        <div class="icon"><img src="src/imagens/wifi-icon.png" alt="Ícone Wi-Fi"></div>
+                        <div class="icon"><img src="src/imagens/speed-icon.png" alt="Ícone Velocidade"></div>
+                        <div class="icon"><img src="src/imagens/cifrao-icon.png" alt="Ícone Pagamento"></div>
+                        <div class="icon"><img src="src/imagens/suporte-icon.png" alt="Ícone Suporte"></div>
+                    </div>
+                    <div class="link-contratar">
+                        <a href="#contratar" onclick="selecionarPlano('Ouro 500MB', 'R$ 109,99')">Contratar</a>
+                    </div>
+                </div>
+
+                <div class="plano-diamante" id="diamante">
+                    <h2>Diamante</h2>
+                    <div>
+                        <span class="quantidade">600</span>
+                        <span class="mbps">MB</span>
+                    </div>
+                    <div class="price-display" style="background: linear-gradient(135deg, #b91c1c, #ef4444); color: white;">
+                        <div class="price-value">R$ 149,99</div>
+                        <div class="price-period">por mês</div>
+                    </div>
+                    <span>* Taxa de ativação: R$ 99,00</span>
+                    <div class="icones">
+                        <div class="icon"><img src="src/imagens/wifi-icon.png" alt="Ícone Wi-Fi"></div>
+                        <div class="icon"><img src="src/imagens/speed-icon.png" alt="Ícone Velocidade"></div>
+                        <div class="icon"><img src="src/imagens/cifrao-icon.png" alt="Ícone Pagamento"></div>
+                        <div class="icon"><img src="src/imagens/suporte-icon.png" alt="Ícone Suporte"></div>
+                    </div>
+                    <div class="link-contratar">
+                        <a href="#contratar" onclick="selecionarPlano('Diamante 600MB', 'R$ 149,99')">Contratar</a>
+                    </div>
+                </div>
+
+                <div class="plano-premium" id="premium">
+                    <h2>Premium</h2>
+                    <div>
+                        <span class="quantidade">900</span>
+                        <span class="mbps">MB</span>
+                    </div>
+                    <div class="price-display" style="background: linear-gradient(135deg, #7c3aed, #a855f7); color: white;">
+                        <div class="price-value">R$ 199,99</div>
+                        <div class="price-period">por mês</div>
+                    </div>
+                    <span>* Taxa de ativação: R$ 99,00</span>
+                    <div class="icones">
+                        <div class="icon"><img src="src/imagens/wifi-icon.png" alt="Ícone Wi-Fi"></div>
+                        <div class="icon"><img src="src/imagens/speed-icon.png" alt="Ícone Velocidade"></div>
+                        <div class="icon"><img src="src/imagens/rede-icon.png" alt="Ícone Velocidade"></div>
+                        <div class="icon"><img src="src/imagens/cifrao-icon.png" alt="Ícone Pagamento"></div>
+                        <div class="icon"><img src="src/imagens/suporte-icon.png" alt="Ícone Suporte"></div>
+                    </div>
+                    <div class="link-contratar">
+                        <a href="#contratar" onclick="selecionarPlano('Premium 900MB', 'R$ 199,99')">Contratar</a>
+                    </div>
+                </div>
+
+                <div class="plano-gamer" id="gamer">
+                    <h2>Gamer IP Fixo</h2>
+                    <div>
+                        <span class="quantidade">1GB</span>
+                        <span class="mbps">+ IP Fixo</span>
+                    </div>
+                    <div class="price-display" style="background: linear-gradient(135deg, #059669, #10b981); color: white;">
+                        <div class="price-value">R$ 399,99</div>
+                        <div class="price-period">por mês</div>
+                    </div>
+                    <span>* Taxa de ativação: R$ 99,00</span>
+                    <div class="icones">
+                        <div class="icon"><img src="src/imagens/wifi-icon.png" alt="Ícone Wi-Fi"></div>
+                        <div class="icon"><img src="src/imagens/speed-icon.png" alt="Ícone Velocidade"></div>
+                        <div class="icon"><img src="src/imagens/rede-icon.png" alt="Ícone Velocidade"></div>
+                        <div class="icon"><img src="src/imagens/cifrao-icon.png" alt="Ícone Pagamento"></div>
+                        <div class="icon"><img src="src/imagens/gamer-icon.png" alt="Ícone Velocidade"></div>
+                        <div class="icon"><img src="src/imagens/suporte-icon.png" alt="Ícone Suporte"></div>
+                    </div>
+                    <div class="link-contratar">
+                        <a href="#contratar" onclick="selecionarPlano('Gamer IP Fixo 1GB', 'R$ 399,99')">Contratar</a>
+                    </div>
+                </div>
+
+                <div class="banner-vip">
+                    <div class="descricao">
+                        <h3>Internet rápida de verdade é na Vip+ Tecnologia!</h3>
+                        <p class="paragrafo">Fibra óptica de qualidade, planos que cabem no seu bolso e suporte que resolve de verdade. Vem ser Vip!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="plan-comparison">
+                <h3 style="text-align: center; margin-bottom: 30px;">📊 Compare nossos planos</h3>
+                <div class="table-container">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Recursos</th>
+                                <th>Bronze</th>
+                                <th class="highlight">Ouro</th>
+                                <th>Diamante</th>
+                                <th>Premium</th>
+                                <th>Gamer</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Velocidade</td>
+                                <td>300MB</td>
+                                <td class="highlight">500MB</td>
+                                <td>600MB</td>
+                                <td>900MB</td>
+                                <td>1GB</td>
+                            </tr>
+                            <tr>
+                                <td>Preço</td>
+                                <td>R$ 99,99</td>
+                                <td class="highlight">R$ 109,99</td>
+                                <td>R$ 149,99</td>
+                                <td>R$ 199,99</td>
+                                <td>R$ 399,99</td>
+                            </tr>
+                            <tr>
+                                <td>Dispositivos</td>
+                                <td>Até 8</td>
+                                <td class="highlight">Até 12</td>
+                                <td>Até 15</td>
+                                <td>Até 20</td>
+                                <td>Ilimitado</td>
+                            </tr>
+                            <tr>
+                                <td>IP Fixo</td>
+                                <td>❌</td>
+                                <td class="highlight">❌</td>
+                                <td>❌</td>
+                                <td>❌</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Suporte</td>
+                                <td>24/7</td>
+                                <td class="highlight">24/7</td>
+                                <td>24/7</td>
+                                <td>24/7</td>
+                                <td>Prioritário</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="installation-timeline">
+        <h3 style="text-align: center; margin-bottom: 40px;">⏱️ Como funciona a instalação</h3>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>1. Contratação</h4>
+                    <p>Você escolhe o plano e preenche seus dados</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>2. Análise Técnica</h4>
+                    <p>Verificamos a viabilidade no seu endereço</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>3. Agendamento</h4>
+                    <p>Marcamos a instalação em até 48h</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>4. Instalação</h4>
+                    <p>Técnico especializado instala sua internet</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>5. Ativação</h4>
+                    <p>Internet funcionando e você navegando!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="conteudo-secao">
+            <h2>❓ Perguntas Frequentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Qual a velocidade real que vou receber?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Garantimos 100% da velocidade contratada via cabo. Por Wi-Fi, pode haver pequenas variações dependendo da distância do roteador e obstáculos.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Quanto tempo demora a instalação?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Após a contratação, fazemos a instalação em até 48 horas úteis. O processo de instalação leva cerca de 2-3 horas.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Posso cancelar quando quiser?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim! Não temos fidelidade. Você pode cancelar quando quiser, apenas solicitando com 30 dias de antecedência.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>O suporte funciona mesmo 24h?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim! Temos suporte técnico 24 horas por dia, 7 dias por semana via WhatsApp e telefone para resolver qualquer problema.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Vocês atendem minha região?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Atendemos grande parte de São Luís e região metropolitana. Entre em contato conosco para verificar a disponibilidade no seu endereço.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao" id="sobre">
+        <div class="conteudo-secao">
+            <h2>Sobre a Vipmais</h2>
+            <div class="sobre-grid">
+                <div class="sobre-texto">
+                    <p>A Vipmais Tecnologia é uma empresa especializada em provedores de internet de alta qualidade, oferecendo conexões de fibra óptica para residências e empresas.</p>
+                    <p>Com anos de experiência no mercado, nossa missão é levar internet rápida, estável e confiável para todos os nossos clientes, sempre com o melhor custo-benefício da região.</p>
+                    <p>Nosso compromisso é com a excelência no atendimento e na qualidade dos serviços prestados.</p>
+                </div>
+                <div class="sobre-stats">
+                    <div class="stat">
+                        <span class="stat-numero">5000+</span>
+                        <span class="stat-texto">Clientes Satisfeitos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-numero">99.9%</span>
+                        <span class="stat-texto">Uptime Garantido</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-numero">24/7</span>
+                        <span class="stat-texto">Suporte Técnico</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-numero">100%</span>
+                        <span class="stat-texto">Fibra Óptica</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao" id="suporte" style="background: var(--light-color);">
+        <div class="conteudo-secao">
+            <h2>Suporte Técnico</h2>
+            <div class="suporte-intro">
+                <div class="suporte-texto">
+                    <h3>🛠️ Suporte que resolve de verdade!</h3>
+                    <p>Na Vipmais, nosso suporte técnico funciona 24 horas por dia, 7 dias por semana. Nossa equipe especializada está sempre pronta para resolver qualquer problema ou dúvida que você possa ter.</p>
+                    <p>Seja por telefone, WhatsApp ou atendimento presencial, garantimos que você nunca ficará sem assistência. Nossos técnicos são treinados para resolver desde questões simples até problemas mais complexos de conectividade.</p>
+                    <div class="suporte-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Atendimento</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">< 2min</span>
+                            <span class="stat-label">Tempo Resposta</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Satisfação</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="suporte-imagem">
+                    <img src="src/imagens/suporte.jpg" alt="Equipe de Suporte Vipmais" style="width: 100%; height: 300px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+            <div class="suporte-cards">
+                <div class="suporte-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>Atendimento 24/7</h3>
+                    <p>Nossa equipe está sempre disponível para resolver qualquer problema técnico ou dúvida sobre nossos serviços.</p>
+                </div>
+                <div class="suporte-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Suporte Técnico</h3>
+                    <p>Técnicos especializados prontos para atender você remotamente ou presencialmente quando necessário.</p>
+                </div>
+                <div class="suporte-card">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>Atendimento rápido e direto pelo WhatsApp. Tire suas dúvidas ou solicite suporte de forma prática.</p>
+                </div>
+                <div class="suporte-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Telefone</h3>
+                    <p>Central de atendimento por telefone para resolver questões urgentes e dar suporte completo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao" id="contratar" style="background: var(--light-color);">
+        <div class="conteudo-secao">
+            <h2>Contrate Agora</h2>
+            <div class="formulario-container">
+                <div class="formulario-card">
+                    <h3>Preencha seus dados e entraremos em contato</h3>
+                    <form id="formularioContrato" class="formulario-contrato">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nome">Nome Completo *</label>
+                                <input type="text" id="nome" name="nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefone">Telefone/WhatsApp *</label>
+                                <input type="tel" id="telefone" name="telefone" required placeholder="(98) 99999-9999">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cpf">CPF *</label>
+                                <input type="text" id="cpf" name="cpf" required placeholder="000.000.000-00">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" placeholder="seu@email.com">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="plano">Plano Desejado *</label>
+                                <select id="plano" name="plano" required>
+                                    <option value="">Selecione um plano</option>
+                                    <option value="Bronze 300MB - R$ 99,99">Bronze 300MB - R$ 99,99</option>
+                                    <option value="Ouro 500MB - R$ 109,99">Ouro 500MB - R$ 109,99</option>
+                                    <option value="Diamante 600MB - R$ 149,99">Diamante 600MB - R$ 149,99</option>
+                                    <option value="Premium 900MB - R$ 199,99">Premium 900MB - R$ 199,99</option>
+                                    <option value="Gamer IP Fixo 1GB - R$ 399,99">Gamer IP Fixo 1GB - R$ 399,99</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="endereco">Endereço Completo *</label>
+                            <input type="text" id="endereco" name="endereco" required placeholder="Rua, número, bairro, cidade">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="observacoes">Observações</label>
+                            <textarea id="observacoes" name="observacoes" rows="3" placeholder="Alguma informação adicional..."></textarea>
+                        </div>
+                        
+                        <div class="form-buttons">
+                            <button type="submit" class="btn-enviar">
+                                <i class="fas fa-paper-plane"></i>
+                                Enviar Solicitação
+                            </button>
+                            <button type="button" class="btn-whatsapp" onclick="enviarWhatsApp()">
+                                <i class="fab fa-whatsapp"></i>
+                                Enviar via WhatsApp
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <div id="mensagemSucesso" class="mensagem-sucesso" style="display: none;">
+                        <i class="fas fa-check-circle"></i>
+                        <h4>Solicitação enviada com sucesso!</h4>
+                        <p>Entraremos em contato em breve para finalizar sua contratação.</p>
+                    </div>
+                </div>
+                
+                <div class="info-contrato">
+                    <h3>Por que escolher a Vipmais?</h3>
+                    <div class="vantagens">
+                        <div class="vantagem">
+                            <i class="fas fa-rocket"></i>
+                            <div>
+                                <h4>Instalação Rápida</h4>
+                                <p>Instalação em até 48h após aprovação</p>
+                            </div>
+                        </div>
+                        <div class="vantagem">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>Garantia Total</h4>
+                                <p>30 dias de garantia ou seu dinheiro de volta</p>
+                            </div>
+                        </div>
+                        <div class="vantagem">
+                            <i class="fas fa-headset"></i>
+                            <div>
+                                <h4>Suporte 24/7</h4>
+                                <p>Atendimento técnico sempre disponível</p>
+                            </div>
+                        </div>
+                        <div class="vantagem">
+                            <i class="fas fa-wifi"></i>
+                            <div>
+                                <h4>100% Fibra Óptica</h4>
+                                <p>Tecnologia de ponta para máxima velocidade</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao" id="local">
+        <div class="conteudo-secao">
+            <h2>Nossa Localização</h2>
+            <div class="mapa-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.123456789!2d-45.2345678!3d-2.5432109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92c0f8a1b2c3d4e5%3A0x1234567890abcdef!2sRua%20Tamandar%C3%A9%20Peixoto%2C%2059%2C%20Santa%20Luzia%20do%20Paru%C3%A1%20-%20MA!5e0!3m2!1spt-BR!2sbr!4v1640995200000" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="endereco-info">
+                <div class="endereco-card">
+                    <h3><i class="fas fa-map-marker-alt"></i> Endereço</h3>
+                    <p>Rua Tamandaré Peixoto, 59</p>
+                    <p>Santa Luzia do Paruá/MA</p>
+                    <p>CEP: 65272-000</p>
+                </div>
+                <div class="endereco-card">
+                    <h3><i class="fas fa-clock"></i> Horário de Funcionamento</h3>
+                    <p>Segunda a Sexta: 8:00 - 12:00</p>
+                    <p>Sábado: 8:00 - 11:30</p>
+                    <p>Domingo: Fechado</p>
+                </div>
+                <div class="endereco-card">
+                    <h3><i class="fas fa-phone"></i> Contato</h3>
+                    <p>Telefone: (98) 8753-7010</p>
+                    <p>WhatsApp: (98) 8753-7010</p>
+                    <p>Email: contato@vipmais.com.br</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <div class="rodape-secao">
+                <h3>Vipmais Tecnologia</h3>
+                <p>Provedor de internet de alta qualidade com fibra óptica para residências e empresas.</p>
+                <div class="redes-sociais">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="rodape-secao">
+                <h3>Endereço</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Rua Tamandaré Peixoto, 59</p>
+                <p>Santa Luzia do Paruá/MA</p>
+                <p>CEP: 65272-000</p>
+                <p><i class="fas fa-phone"></i> (98) 8753-7010</p>
+            </div>
+            
+            <div class="rodape-secao">
+                <h3>Links Úteis</h3>
+                <a href="#inicio">Início</a>
+                <a href="#planos">Planos</a>
+                <a href="#contratar">Contratar</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#suporte">Suporte</a>
+                <a href="#local">Localização</a>
+            </div>
+            
+            <div class="rodape-secao">
+                <h3>Homologação ANATEL</h3>
+                <p>Empresa devidamente homologada pela ANATEL</p>
+                <p>Registro: 123456789</p>
+                <p>Licença de Funcionamento: SCM-12345</p>
+                <p>Conforme Lei 9.472/97</p>
+            </div>
+        </div>
+        
+        <div class="rodape-bottom">
+            <p>&copy; 2024 Vipmais Tecnologia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot">
+        <button class="chatbot-toggle" onclick="toggleChatbot()">
+            <i class="fas fa-robot"></i>
+        </button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                🤖 Assistente Vipmais
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="chatbot-message bot">
+                    Olá! Sou o assistente virtual da Vipmais. Como posso ajudar você hoje?
+                </div>
+            </div>
+            <div class="chatbot-options">
+                <div class="chatbot-option" onclick="chatbotResponse('planos')">Ver planos disponíveis</div>
+                <div class="chatbot-option" onclick="chatbotResponse('velocidade')">Qual velocidade preciso?</div>
+                <div class="chatbot-option" onclick="chatbotResponse('instalacao')">Como funciona a instalação?</div>
+                <div class="chatbot-option" onclick="chatbotResponse('suporte')">Falar com suporte</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Float -->
+    <div class="whatsapp-float">
+        <button class="whatsapp-btn" onclick="openWhatsApp()">
+            <i class="fab fa-whatsapp"></i>
+        </button>
+    </div>
+
+    <script src="src/javascript/script.js"></script>
+    
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9725c6a061b9dd84',t:'MTc1NTczMzY0Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
